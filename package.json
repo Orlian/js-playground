@@ -3,8 +3,12 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "watch": {
+    "test": "{src,test}/*.js"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "npm-watch"
   },
   "repository": {
     "type": "git",
@@ -15,5 +19,9 @@
   "bugs": {
     "url": "https://github.com/Orlian/js-playground/issues"
   },
-  "homepage": "https://github.com/Orlian/js-playground#readme"
+  "homepage": "https://github.com/Orlian/js-playground#readme",
+  "dependencies": {
+    "bootstrap": "^5.3.0",
+    "npm-watch": "^0.11.0"
+  }
 }
