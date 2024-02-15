@@ -22,6 +22,10 @@
   "homepage": "https://github.com/Orlian/js-playground#readme",
   "dependencies": {
     "bootstrap": "^5.3.0",
+    "jquery": "^3.7.1",
     "npm-watch": "^0.11.0"
+  },
+  "devDependencies": {
+    "prettier": "3.2.5"
   }
 }
