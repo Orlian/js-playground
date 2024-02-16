@@ -2,6 +2,7 @@
 import Person from "./classes/person.js";
 
 const $inputModal = $(".input-modal");
+const $inputModalCloseBtn = $(".input-modal .cancel-btn");
 const $newGameButton = $(".start-game-btn");
 const $confirmCharacterBtn = $("#confirm-character-btn");
 const $checkCharacterStatsBtn = $("#check-character-stats-btn");
@@ -46,8 +47,8 @@ const validateCharacterInfo = () => {
 };
 
 $newGameButton.on("click", () => {
-  if ($inputModal.hasClass("d-none")) {
-    $inputModal.removeClass("d-none");
+  if (!$inputModal.hasClass("active")) {
+    $inputModal.addClass("active");
   }
 });
 
@@ -58,9 +59,18 @@ $confirmCharacterBtn.on("click", () => {
   }
 });
 
+$inputModalCloseBtn.on("click", () => {
+  $inputModal.removeClass("active");
+});
+
 $checkCharacterStatsBtn.on("click", () => {
   if (typeof player === "undefined") {
     player = JSON.parse(sessionStorage.getItem("character"));
+  }
+
+  if (typeof player === "undefined" || player == null) {
+    console.log("No player found");
+    return;
   }
   showCharacterStats(player);
 });

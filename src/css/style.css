@@ -1,0 +1,28 @@
+.cancel-btn {
+  width: fit-content;
+  height: fit-content;
+  pointer-events: fill;
+}
+
+.cancel-btn svg {
+  width: 2rem;
+  height: 2rem;
+  fill: white;
+  cursor: pointer;
+}
+
+.cancel-btn svg:hover {
+  fill: #ccc;
+}
+
+.game-screen {
+  background-color: antiquewhite;
+}
+
+.input-modal {
+  display: none;
+}
+
+.input-modal.active {
+  display: block;
+}
