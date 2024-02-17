@@ -17,7 +17,7 @@ class Person {
     this.money = parseFloat(money);
   }
 
-  changeMoney(changeMultiplier = 1, changeAmount = 0) {
+  changeMoney(changeAmount = 0, changeMultiplier = 1) {
     if (changeMultiplier !== 1) {
       this.money *= changeMultiplier;
     }
